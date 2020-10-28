@@ -11,10 +11,9 @@ const Chart = ({data: { confirmed, recovered, deaths } , country}) => {
         const fetchAPI = async () => {
             setDailyData (await fetchDailyData());
         }
-        console.log(dailyData)
         
         fetchAPI()
-    }, [dailyData]);
+    }, []);
 
     const lineChart = (
         dailyData.length
